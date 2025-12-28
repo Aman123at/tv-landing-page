@@ -60,6 +60,8 @@ const NavHeader = ({ navigationData, className, path }: HeaderProps) => {
                     <DropdownMenuContent className='w-56' align='end'>
                         <DropdownMenuItem>
                         <a>Char Dham Yatra</a>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
                         <a>Haridwar</a>
                         </DropdownMenuItem>
                     </DropdownMenuContent>
@@ -75,7 +77,9 @@ const NavHeader = ({ navigationData, className, path }: HeaderProps) => {
                     <DropdownMenuContent className='w-56' align='end'>
                         <DropdownMenuItem>
                         <a>Char Dham Yatra</a>
-                        <a>Haridwar</a>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                         <a>Haridwar</a>
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
@@ -88,9 +92,11 @@ const NavHeader = ({ navigationData, className, path }: HeaderProps) => {
                     </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className='w-56' align='end'>
-                        <DropdownMenuItem>
+                         <DropdownMenuItem>
                         <a>Char Dham Yatra</a>
-                        <a>Haridwar</a>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                         <a>Haridwar</a>
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
@@ -117,11 +123,24 @@ const NavHeader = ({ navigationData, className, path }: HeaderProps) => {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className='w-56' align='end'>
-              {navigationData.map((item, index) => (
-                <DropdownMenuItem key={index}>
-                  <a href={item.href}>{item.title}</a>
+                <DropdownMenuItem onClick={() => router.push("/")}>
+                  Home
                 </DropdownMenuItem>
-              ))}
+                 <DropdownMenuItem onClick={() => router.push("/about-us")}>
+                  About Us
+                </DropdownMenuItem>
+                 <DropdownMenuItem>
+                  Destinations
+                </DropdownMenuItem>
+                 <DropdownMenuItem>
+                  Tour Packages
+                </DropdownMenuItem>
+                 <DropdownMenuItem>
+                  Experiences
+                </DropdownMenuItem>
+                 <DropdownMenuItem onClick={() => router.push("/contact-us")}>
+                  Contact Us
+                </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
