@@ -5,10 +5,6 @@ import { supabase } from '@/lib/supabaseClient';
 export async function POST(req: Request) {
   const { title } = await req.json();
 
-//   if (!text) {
-//     return NextResponse.json({ error: 'No text provided' }, { status: 400 });
-//   }
-
   // 1. Split text into chunks (Simple splitting by period for demo)
   // In production, use a library like 'langchain' text splitters
   const chunks = [
